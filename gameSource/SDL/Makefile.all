@@ -1,0 +1,128 @@
+#
+# Modification History
+#
+# 2006-June-27    Jason Rohrer
+# Created.  Copied from Transcend.
+#
+
+
+##
+# The portion of Diamonds Makefiles common to all SDL platforms.
+#
+# Should not be made manually---used by SDL/configure to build Makefiles.
+##
+
+
+
+
+ROOT_PATH = ../../..
+
+
+SDL_SOURCE = \
+main.cpp \
+
+
+EXE_FILE = ../DiamondTrust
+
+
+SDL_OBJECTS = ${SDL_SOURCE:.cpp=.o}
+
+# for GAME_SOURCE definitions
+include ../makeDefs
+
+# prepend paths
+PATH_GAME_SOURCE = $(patsubst %,../%,$(GAME_SOURCE))
+
+GAME_OBJECTS = ${PATH_GAME_SOURCE:.cpp=.o}
+
+
+
+
+
+NEEDED_MINOR_GEMS_OBJECTS = \
+ ${SINGLE_TEXTURE_GL_O} \
+ ${TYPE_IO_O} \
+ ${STRING_UTILS_O} \
+ ${STRING_BUFFER_OUTPUT_STREAM_O} \
+ ${PATH_O} \
+ ${TIME_O} \
+ ${THREAD_O} \
+ ${FINISHED_SIGNAL_THREAD_O} \
+ ${MUTEX_LOCK_O} \
+ ${SOCKET_O} \
+ ${HOST_ADDRESS_O} \
+ ${SOCKET_CLIENT_O} \
+ ${SOCKET_SERVER_O} \
+ ${NETWORK_FUNCTION_LOCKS_O} \
+ ${LOOKUP_THREAD_O} \
+ ${SETTINGS_MANAGER_O} \
+ ${SHA1_O} \
+ ${ENCODING_UTILS_O} \
+ ${JRI_O} \
+ ${DIRECTORY_O} \
+ 
+
+
+TEST_SOURCE = 
+TEST_OBJECTS = ${TEST_SOURCE:.cpp=.o}
+
+
+
+DEPENDENCY_FILE = Makefile.dependencies
+
+
+# targets
+
+.PHONY: all clean gameDataDir
+
+all: gameDataDir ${EXE_FILE} 
+
+clean:
+	rm -f ${DEPENDENCY_FILE} ${SDL_OBJECTS} ${GAME_OBJECTS} ${TEST_OBJECTS} ${NEEDED_MINOR_GEMS_OBJECTS} ${EXE_FILE}
+	$(MAKE) -C .. clean
+
+
+gameDataDir:
+	$(MAKE) -C ..
+
+
+${EXE_FILE}: ${SDL_OBJECTS} ${GAME_OBJECTS} ${NEEDED_MINOR_GEMS_OBJECTS}
+	${EXE_LINK} -o ${EXE_FILE} ${SDL_OBJECTS} ${GAME_OBJECTS} ${NEEDED_MINOR_GEMS_OBJECTS} ${PLATFORM_LINK_FLAGS} 
+
+
+
+
+
+
+# GAME_SOURCE_SED_FIX_COMMAND defined in makeDefs
+
+
+
+# this file is included by main.cpp, and needed to generate our dependency
+# file below.  However, we can't build this file yet, because it
+# requires calling make on ..
+# and we can't do that before we include things in this makefile (because
+# it seems to cause an endless make loop)
+# So, we resort to simply complaining about it.
+../dataFiles.cpp:
+	@echo ""
+	@echo "../dataFiles.cpp does not exist."
+	@echo "Try running make in gameSource directory first."
+	@echo ""
+	@exit 1
+
+
+
+# build the dependency file
+${DEPENDENCY_FILE}: ${SDL_SOURCE} ${PATH_GAME_SOURCE} ${TEST_SOURCE} ../dataFiles.cpp
+	rm -f ${DEPENDENCY_FILE}
+	${COMPILE} -MM ${SDL_SOURCE} ${PATH_GAME_SOURCE} ${TEST_SOURCE} >> ${DEPENDENCY_FILE}.temp
+	cat ${DEPENDENCY_FILE}.temp | ${GAME_SOURCE_SED_FIX_COMMAND} >> ${DEPENDENCY_FILE}
+	rm -f ${DEPENDENCY_FILE}.temp
+
+include ${DEPENDENCY_FILE}
+
+
+
+
+

@@ -1,0 +1,197 @@
+status_loading "Loading"
+
+status_next  "Next:"
+status_finished  "Finished:"
+subStatus_moveOn "Touch Next to continue"
+
+
+button_start "Start"
+button_done "Done"
+button_next "Next"
+
+button_back "Cancel"
+
+button_play_again "Play Again"
+
+
+button_continue "Continue"
+button_quit "Quit"
+
+
+button_nextSongAct "fwd"
+button_songReroll "rand"
+button_switchSongs "songR"
+button_songPlus "song+"
+button_songMinus "song-"
+button_closeLid "close lid"
+button_openLid "open lid"
+button_mute "mute"
+button_unmute "!mute!"
+
+button_volPlus "vol+"
+button_volMinus "vol-"
+
+
+
+button_ai "Single Player"
+button_wifi "Two Players"
+
+
+button_parent "Host Game"
+button_parent_muti_card "Host Game"
+button_parent_clone "Single-Card Play" 
+button_child "Join Game"
+
+
+stats_monthsLeft_As "months"
+stats_monthsLeft_A "month"
+stats_monthsLeft_B "left"
+
+stats_selling "Selling:"
+stats_earning  "Earning:"
+
+stats_sellZeroNote "Trust pays you $%d to keep diamonds off the market"
+stats_sellSomeNote "You get share of $%d based on total diamonds sold"
+
+stats_salary "Salary:"
+stats_bribes "Bribes:"
+
+stats_bribing "Bribing:"
+stats_bribedBy "Bribed by:"
+
+stats_tripCost "Trip cost:"
+
+
+stats_inspectorBlocking "Will block sale of:"
+stats_inspectorConfiscating "Will confiscate:"
+
+camera_securityHeader "Vault Security System"
+camera_securityCompromised "SYSTEM COMPROMISED"
+
+
+phaseStatus_gameType  "Select game type"
+phaseSubStatus_gameType  "Play against AI or via wireless communications"
+
+
+phaseStatus_aiLevel  "Set AI level"
+phaseSubStatus_aiLevel  "High levels give AI longer to find a good move"
+
+level "level"
+
+
+phaseStatus_connect  "Connect to opponent"
+phaseSubStatus_parentOrChild  "Host a game or join one started by a friend"
+phaseSubStatus_waitingConnect  "Waiting for a connection"
+phaseSubStatus_waitingConnectOn  "Waiting for a connection on "
+phaseSubStatus_connectingToParent  "Searching for a host..."
+phaseSubStatus_connectFailed  "Connection lost"
+
+
+phaseSubStatus_sendingDownload "Transferring download to opponent"
+phaseSubStatus_waitingReconnect "Waiting for opponent to reconnect"
+
+phaseSubStatus_waitAgainAfterFailedTransfer "Transfer failed, waiting for a new connection"
+
+
+
+phaseStatus_connectionFailed  "Connection lost"
+
+
+phaseStatus_accumulate  "Diamonds accumulate"
+phaseSubStatus_accumulate  "New month, regions produce more diamonds"
+
+
+phaseStatus_payAgents  "Pay agents"
+phaseSubStatus_pickSalary  "Select salary payment for this agent"
+phaseSubStatus_pickOpponentBribe  "Select bribe payment for this opponent agent"
+phaseSubStatus_payAgentCannot  "None are payable (touch Done when ready)"
+
+
+
+phaseStatus_move  "Move your agents"
+phaseStatus_movePeek  "Bribed agents reveal plan"
+
+phaseSubStatus_pickAgent  "Pick an agent (or touch Done)"
+phaseSubStatus_pickAgentAdjust  "Adjust move?  Pick an agent (or touch Done)"
+phaseSubStatus_pickRegion  "Pick destination for chosen agent"
+phaseSubStatus_pickBid  "How much to pay diamond guide in this region?"
+phaseSubStatus_pickInspectorBribe  "Bribe the UN Inspector?"
+phaseSubStatus_waitingOpponent  "Waiting for opponent to move..."
+phaseSubStatus_moveExecute  "Executing moves..."
+
+
+phaseStatus_depositDiamonds  "Depositing diamonds"
+phaseSubStatus_depositDiamonds "Agents returning home unload their diamonds"
+
+
+phaseStatus_moveInspector  "Move the UN Inspector"
+phaseSubStatus_pickInspectorRegion  "Pick destination (or touch Done)"
+
+
+phaseStatus_confiscate  "UN inspection"
+phaseSubStatus_confiscate  "Inspector confiscates diamonds"
+
+
+phaseStatus_buyDiamonds  "Collecting diamonds"
+phaseSubStatus_buyDiamonds  "Guides help highest payer get diamonds"
+
+
+phaseStatus_sellDiamonds  "Sell diamonds"
+phaseStatus_sellPeek  "Bribed agents reveal sale"
+phaseSubStatus_sellDiamonds  "Pick number to sell on market (or touch Done)"
+phaseSubStatus_sellDiamondsAdjust  "Adjust sale?  Pick new quanity (or touch Done)"
+phaseSubStatus_sellDiamondsNone "You have none to sell (touch Done when ready)"
+
+phaseSubStatus_sellDiamondsPicture "Enter vault to remove diamonds"
+
+
+phaseStatus_flyHome   "Final trip home"
+phaseSubStatus_flyHome   "Time to get out of Angola"
+
+
+phaseStatus_youWin       "You win"
+phaseStatus_opponentWins "You lose"
+phaseStatus_tie "Tie game"
+
+phaseSubStatus_playAgainWait  "Waiting for host to play again..." 
+
+
+
+credit_1a "INDIEPUB"
+credit_1b "presents"
+
+
+credit_2a "a game by"
+credit_2b "JASON ROHRER"
+
+
+credit_3a "with interactive music by"
+credit_3b "TOM BAILEY"
+
+
+
+
+
+help_aiLevel "A game involving deception is best played against another human.  The AI provides a reasonable practice opponent, allowing you to learn the game at your own pace before you face a friend.  The AI's skill at lower levels is good but not great, since reasoning about incomplete information requires quite a bit of probabilistic simulation.  Higher levels allow the AI to consider more candidate moves before picking one.  For example, at level 10, ten times more moves are considered, taking ten times as long."
+
+
+
+help_payAgents  "You can pay salary to your agents when they are at home in London.  You can bribe opponent agents when your agents meet them out in the field.  Paying your agents salary keeps them loyal in the face of your opponent's bribes.  If total bribes to an agent exceed total salary, that agent will become loyal to the other side and start quietly revealing secret information (like move destinations and diamond payments).  How do you find out if one of your agents has been successfully bribed?  Bribe the briber."
+
+
+
+help_moveUnits  "In an Angola region, you can pay the diamond guide.  He will accept money from both players, but he gives all diamonds to the player who pays more.  If players tie, the diamonds stay in that region.  The UN Inspector blocks diamond sales and confiscates agents' diamonds.  If you fly into his region, you can bribe him to move to a different region.  He also accepts money from both players but only obeys the one who pays more.  Fly agents home to drop off their diamonds.  Trips inside Angola are cheaper than international trips."
+
+
+help_moveUnitsPeek  "Agents that have been successfully bribed reveal their destinations, diamond payments, and UN Inspector bribes to the other side.  You have a chance to adjust your move now that this information has been revealed.  If your opponent is aware of bribes, your opponent has the same chance to adjust.  Adjusted moves are final and are not revealed to the other side before being executed."
+
+
+
+help_moveInspector  "When a player successfully bribes the UN Inspector (by paying a larger bribe than the opponent pays him that turn), that player can send him to a different region.  When the Inspector reaches the new region, he immediately confiscates any diamonds held by agents there and blocks the pending diamond sale.  Players still pay what they have offered for the diamonds, but the diamonds remain in that region."
+
+
+
+help_sellDiamonds  "The money you earn from selling diamonds depends on the total number sold by both players.  More diamonds put on the market means that each one is worth less, and $24 total is available each month.  Players split that amount based on each player's fraction of the total sold.  However, Diamond Trust wants to keep diamonds off the market.  If a player sells no diamonds at all, that player gets a flat $18 kickback no matter what the other player sells."
+
+
+help_sellDiamondsPeek  "A bribed agent in a home region reveals the number of diamonds to be sold.  You have a chance to adjust your number to sell now that this information has been revealed.  Adjusted moves are final and are not revealed to the other side before being executed.  Note that a bribed agent at home also reveals a player's money balance to the other side."
