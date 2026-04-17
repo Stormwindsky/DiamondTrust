@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+if [ "$#" -lt "1" ]
+then
+  echo "Usage:   trimAllWavs newSampleLength"
+  exit 1
+fi
+
+
+echo "trimAllWavs run with $0"
+
+trimWavPath=$( echo "$0" | sed s/trimAllWavs/trimWav/ );
+
+echo "expecting to find trimWav here:  $trimWavPath"
+
+# set input field separator to newline for "find" output that contains
+# spaces in file names
+IFS="
+"
+
+
+
+for file in $( find . -name "*.wav" )
+do
+  echo "Trimming $file..."
+  $trimWavPath "$file" $1
+done 

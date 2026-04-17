@@ -1,0 +1,20 @@
+#!/bin/bash
+
+soxPath="/home/jcr13/sox-14.3.2/src/sox"
+
+
+
+if [ "$#" -lt "2" ]
+then
+  echo "Usage:   trimWav file.wav newSampleLength"
+  exit 1
+fi
+
+
+tempFile="$1.temp.wav"
+
+"$soxPath" "$1" "$tempFile" trim 0s $2s
+
+cp "$tempFile" "$1"
+
+rm "$tempFile"
