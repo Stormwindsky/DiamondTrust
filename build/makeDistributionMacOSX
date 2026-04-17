@@ -1,0 +1,48 @@
+#!/bin/sh
+
+#
+# Modification History
+#
+# 2007-November-12   Jason Rohrer
+# Copied from Cultivation build.
+#
+
+
+if [ $# -lt 3 ] ; then
+   echo "Usage: $0 release_name unix_platform_name path_to_SDL.framework"
+   exit 1
+fi
+
+
+rm -rf mac
+
+mkdir mac
+
+
+
+mkdir mac/DiamondTrust
+mkdir mac/DiamondTrust/gameData
+
+cp ../gameSource/gameData/*.tga mac/DiamondTrust/gameData
+cp ../gameSource/gameData/*.txt mac/DiamondTrust/gameData
+cp -r ../gameSource/gameData/music mac/DiamondTrust/gameData
+
+
+
+cp -r macOSX/DiamondTrust.app mac/DiamondTrust/DiamondTrust.app
+mkdir mac/DiamondTrust/DiamondTrust.app/Contents/MacOS
+cp ../gameSource/DiamondTrust mac/DiamondTrust/DiamondTrust.app/Contents/MacOS
+
+# install SDL framework
+mkdir mac/DiamondTrust/DiamondTrust.app/Contents/Frameworks
+cp -r $3 mac/DiamondTrust/DiamondTrust.app/Contents/Frameworks/
+
+cd mac
+tar cf "DiamondTrust_$1_$2.tar" DiamondTrust
+gzip "DiamondTrust_$1_$2.tar"
+
+
+
+
+
+
