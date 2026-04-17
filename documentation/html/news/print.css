@@ -1,0 +1,9 @@
+@import url(common.css);
+
+
+/* hide top bar when printing */
+div.topbar{ display:none; }
+
+
+/* hide footer links (useless in print) */
+div.footer{ display:none; }
