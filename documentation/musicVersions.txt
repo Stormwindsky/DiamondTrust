@@ -1,0 +1,40 @@
+sept2:
+
+9 songs
+All song loop rearrangement done.
+Volume adjust done on certain loops (song 5, and others)
+
+
+
+sept5:
+
+9 songs
+Song 8 volume reduction
+
+
+
+
+sept6:
+
+10 songs
+Song 6 pops removed.
+
+
+
+sept6_norm:
+
+All songs normalized to 1.0 global peak.
+
+
+sept8:
+
+All songs custom volume-adjusted in game engine.
+
+
+
+sept15
+
+Fixed so that all songs have 4 acts (DS directory listing doesn't work with
+empty folders).
+
+Fixed lead-in note on Song 1, Act 3, Synth 3.2
