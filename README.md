@@ -2,9 +2,9 @@
 
 WARNING I'M NOT THE ORIGINAL CREATOR OF THIS GAME THIS GAME IS NOW PUBLIC DOMAIN SO I MADE THIS VERSION UNDER GITHUB BC GITHUB IS MORE POPULAR THAN SOURCEFORGE
 
-Publisher: indiePub
-Developer: Jason Rohrer
-Composer: Tom Bailey
+#### Publisher: indiePub
+#### Developer: Jason Rohrer
+#### Composer: Tom Bailey
 
 For more info about this game here:
 
